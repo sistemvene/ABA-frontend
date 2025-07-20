@@ -1,12 +1,15 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+
+import react from '@vitejs/plugin-react'
+
 
 export default defineConfig({
+
   plugins: [react()],
-  root: process.cwd(),
-  base: './',
-  build: {
-    outDir: 'dist',
-    emptyOutDir: true,
-  },
-});
+
+  root: '.',     // la raíz del proyecto (index.html aquí)
+
+  publicDir: 'public', // solo para assets estáticos
+
+})
+
